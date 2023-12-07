@@ -1,5 +1,8 @@
 stored = []
 function fibonacci(num) {
+
+    if (stored[num]) return stored[num]
+
     if (num === 0) stored[0] = 0
     if (num === 1) stored[1] = 1
 
