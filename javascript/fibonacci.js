@@ -1,5 +1,11 @@
+stored = []
 function fibonacci(num) {
-// type your code here
+    if (num === 0) stored[0] = 0
+    if (num === 1) stored[1] = 1
+
+    if (num > 1) stored[num] = fibonacci(num-2) + fibonacci(num-1)
+
+    return stored[num]
 }
 
 if (require.main === module) {
